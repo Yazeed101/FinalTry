@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tasks — Acme</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-head">
+        <div class="workspace">
+          <div class="workspace-avatar">A</div>
+          <div class="workspace-meta">
+            <div class="workspace-name">Acme Inc.</div>
+            <div class="workspace-plan">Workspace</div>
+          </div>
+          <i data-lucide="chevrons-up-down" class="icon-16 muted"></i>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <div class="nav-section">
+          <a class="nav-item" href="#">
+            <i data-lucide="inbox" class="icon-16"></i>
+            <span>Inbox</span>
+            <span class="badge">4</span>
+          </a>
+          <a class="nav-item" href="#">
+            <i data-lucide="layout-grid" class="icon-16"></i>
+            <span>Overview</span>
+          </a>
+          <a class="nav-item active" href="#">
+            <i data-lucide="check-square" class="icon-16"></i>
+            <span>Tasks</span>
+          </a>
+          <a class="nav-item" href="#">
+            <i data-lucide="calendar" class="icon-16"></i>
+            <span>Calendar</span>
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-label">Workspaces</div>
+          <a class="nav-item" href="#">
+            <span class="dot dot-indigo"></span>
+            <span>Design system</span>
+          </a>
+          <a class="nav-item" href="#">
+            <span class="dot dot-amber"></span>
+            <span>Marketing site</span>
+          </a>
+          <a class="nav-item" href="#">
+            <span class="dot dot-emerald"></span>
+            <span>Mobile app</span>
+          </a>
+          <a class="nav-item" href="#">
+            <span class="dot dot-rose"></span>
+            <span>Billing</span>
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-label">Account</div>
+          <a class="nav-item" href="#">
+            <i data-lucide="settings" class="icon-16"></i>
+            <span>Settings</span>
+          </a>
+          <a class="nav-item" href="#">
+            <i data-lucide="life-buoy" class="icon-16"></i>
+            <span>Support</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="sidebar-foot">
+        <div class="user">
+          <div class="avatar">JD</div>
+          <div class="user-meta">
+            <div class="user-name">Jenna Doyle</div>
+            <div class="user-mail">jenna@acme.co</div>
+          </div>
+          <i data-lucide="more-horizontal" class="icon-16 muted"></i>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+      <header class="topbar">
+        <div class="crumbs">
+          <span class="crumb muted">Workspaces</span>
+          <i data-lucide="chevron-right" class="icon-14 muted"></i>
+          <span class="crumb">Tasks</span>
+        </div>
+        <div class="topbar-actions">
+          <button class="btn-ghost" aria-label="Search">
+            <i data-lucide="search" class="icon-16"></i>
+          </button>
+          <button class="btn-ghost" aria-label="Notifications">
+            <i data-lucide="bell" class="icon-16"></i>
+          </button>
+          <div class="sep"></div>
+          <button class="btn-primary">
+            <i data-lucide="plus" class="icon-14"></i>
+            <span>New task</span>
+          </button>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="page-head">
+          <div>
+            <h1 class="title">Tasks</h1>
+            <p class="subtitle">Track work across all your projects in one place.</p>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <section class="stats">
+          <article class="stat-card">
+            <div class="stat-head">
+              <span class="stat-label">Open tasks</span>
+              <i data-lucide="circle-dashed" class="icon-16 muted"></i>
+            </div>
+            <div class="stat-value">47</div>
+            <div class="stat-trend up">
+              <i data-lucide="trending-up" class="icon-12"></i>
+              <span>+12%</span>
+              <span class="muted">vs last week</span>
+            </div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-head">
+              <span class="stat-label">In progress</span>
+              <i data-lucide="loader" class="icon-16 muted"></i>
+            </div>
+            <div class="stat-value">18</div>
+            <div class="stat-trend down">
+              <i data-lucide="trending-down" class="icon-12"></i>
+              <span>-3%</span>
+              <span class="muted">vs last week</span>
+            </div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-head">
+              <span class="stat-label">Completed</span>
+              <i data-lucide="check-circle-2" class="icon-16 muted"></i>
+            </div>
+            <div class="stat-value">126</div>
+            <div class="stat-trend up">
+              <i data-lucide="trending-up" class="icon-12"></i>
+              <span>+24%</span>
+              <span class="muted">vs last week</span>
+            </div>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-head">
+              <span class="stat-label">Overdue</span>
+              <i data-lucide="alert-circle" class="icon-16 muted"></i>
+            </div>
+            <div class="stat-value">5</div>
+            <div class="stat-trend down">
+              <i data-lucide="trending-down" class="icon-12"></i>
+              <span>-2</span>
+              <span class="muted">vs last week</span>
+            </div>
+          </article>
+        </section>
+
+        <!-- Task table -->
+        <section class="panel">
+          <div class="panel-head">
+            <div class="filters">
+              <div class="search">
+                <i data-lucide="search" class="icon-14 muted"></i>
+                <input id="search" type="text" placeholder="Search tasks…" />
+              </div>
+              <div class="chip-group" id="statusFilter" role="tablist">
+                <button class="chip active" data-status="all">All</button>
+                <button class="chip" data-status="todo">Todo</button>
+                <button class="chip" data-status="in_progress">In progress</button>
+                <button class="chip" data-status="review">In review</button>
+                <button class="chip" data-status="done">Done</button>
+              </div>
+            </div>
+            <div class="panel-actions">
+              <button class="btn-ghost sm">
+                <i data-lucide="sliders-horizontal" class="icon-14"></i>
+                <span>Filter</span>
+              </button>
+              <button class="btn-ghost sm">
+                <i data-lucide="arrow-up-down" class="icon-14"></i>
+                <span>Sort</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th style="width:44px"><input type="checkbox" aria-label="Select all" /></th>
+                  <th>Task</th>
+                  <th style="width:130px">Status</th>
+                  <th style="width:110px">Priority</th>
+                  <th style="width:160px">Assignee</th>
+                  <th style="width:120px">Due</th>
+                  <th style="width:40px"></th>
+                </tr>
+              </thead>
+              <tbody id="taskBody"></tbody>
+            </table>
+            <div id="emptyState" class="empty" hidden>
+              <i data-lucide="search-x" class="icon-20 muted"></i>
+              <p>No tasks match your filters.</p>
+            </div>
+          </div>
+
+          <div class="panel-foot">
+            <span class="muted" id="count">—</span>
+            <div class="pager">
+              <button class="btn-ghost sm" disabled>
+                <i data-lucide="chevron-left" class="icon-14"></i>
+              </button>
+              <span class="muted">Page 1 of 1</span>
+              <button class="btn-ghost sm" disabled>
+                <i data-lucide="chevron-right" class="icon-14"></i>
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
